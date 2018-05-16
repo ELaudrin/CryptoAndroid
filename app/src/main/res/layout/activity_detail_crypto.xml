@@ -11,8 +11,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="295dp"
-        android:layout_height="228dp"
+        android:layout_width="345dp"
+        android:layout_height="176dp"
         android:layout_marginBottom="356dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -20,14 +20,26 @@
         android:src="@drawable/mask"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.64"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="112dp"
+        android:text="TextView"
+        android:textColor="#Fff"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <ListView
         android:id="@+id/list"
         android:layout_width="395dp"
-        android:layout_height="341dp"
+        android:layout_height="305dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -40,17 +52,37 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/TextView"
+        android:id="@+id/coin"
         android:layout_width="wrap_content"
-        android:layout_height="15dp"
-        android:layout_marginBottom="352dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Last Transactions"
-        app:layout_constraintBottom_toBottomOf="@+id/_dynamic"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="80dp"
+        android:text="TextView"
+        android:textColor="#Fff"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/btc"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <ImageButton
+        android:id="@+id/imageView8"
+        android:layout_width="122dp"
+        android:layout_height="65dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginStart="140dp"
+        android:onClick="LogoBouton"
+        android:src="@drawable/btc"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.067"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

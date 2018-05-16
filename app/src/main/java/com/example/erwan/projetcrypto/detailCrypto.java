@@ -25,7 +25,7 @@ class MyAdapter extends BaseAdapter{
 
     @Override
     public int getCount() {
-        return 100;
+        return 10;
     }
 
     @Override
@@ -68,46 +68,21 @@ public class detailCrypto extends Activity {
         liste.setAdapter(myAdapter);
 
 
+        final TextView Coin = findViewById(R.id.coin);
+        final TextView PrixCoin = findViewById(R.id.price);
+        Coin.setText("Bitcoin BTC");
+        PrixCoin.setText("9054.32");
 
-
-        /*android.widget.ListView liste = findViewById(R.id.list);
-
-        java.util.ArrayList maListe = new ArrayList();
-        maListe.add("Sold");
-        maListe.add("Bought");
-        maListe.add("Sold");
-        maListe.add("Ripple");
-
-
-         ArrayAdapter adt = new ArrayAdapter<String>
-                (this, android.R.layout.simple_list_item_1, android.R.id.text1, maListe);
-        liste.setAdapter(adt);
-
-
-        liste.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (position==0){
-
-
-                    Toast toast= Toast.makeText(detailCrypto.this,"En cours de développement",Toast.LENGTH_LONG);
-                    toast.setGravity(Gravity.CENTER, 0, 0);toast.show();
-
-                }else{
-
-                    Toast toast= Toast.makeText(detailCrypto.this,"En cours de développement",Toast.LENGTH_LONG);
-                    toast.setGravity(Gravity.CENTER, 0, 0);toast.show();
-                }
-
-            };
-        });*/
 
 
 
 
     }
 
+    public void LogoBouton (View view){
+        Intent intent0 = new Intent(detailCrypto.this, AchatCoin.class);
+        startActivity(intent0);
 
-
-
+    }
 
 }
