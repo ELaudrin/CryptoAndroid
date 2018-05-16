@@ -12,18 +12,17 @@ import android.widget.Toast;
 import java.util.*;
 import android.graphics.*;
 
-public class detailCrypto extends Activity {
+public class Acceuil extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_crypto);
+        setContentView(R.layout.activity_acceuil);
 
 
+        ListView liste = findViewById(R.id.listView);
 
-        android.widget.ListView liste = findViewById(R.id.list);
-
-        java.util.ArrayList maListe = new ArrayList();
+        ArrayList maListe = new ArrayList();
         maListe.add("Bitcoin");
         maListe.add("Ethereum");
         maListe.add("Litecoin");
@@ -31,7 +30,7 @@ public class detailCrypto extends Activity {
 
 
          ArrayAdapter adt = new ArrayAdapter<String>
-                (this, android.R.layout.simple_list_item_1, android.R.id.text1, maListe);
+                (Acceuil.this, android.R.layout.simple_list_item_1, android.R.id.text1, maListe);
         liste.setAdapter(adt);
 
 
@@ -39,19 +38,17 @@ public class detailCrypto extends Activity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position==0){
 
-
-                    Toast toast= Toast.makeText(detailCrypto.this,"En cours de développement",Toast.LENGTH_LONG);
-                    toast.setGravity(Gravity.CENTER, 0, 0);toast.show();
+                    Intent intent0 = new Intent(Acceuil.this, detailCrypto.class);
+                    startActivity(intent0);
 
                 }else{
 
-                    Toast toast= Toast.makeText(detailCrypto.this,"En cours de développement",Toast.LENGTH_LONG);
-                    toast.setGravity(Gravity.CENTER, 0, 0);toast.show();
+                    Intent intent1 = new Intent(Acceuil.this, detailCrypto.class);
+                    startActivity(intent1);
                 }
 
             };
         });
+
     }
-
-
 }

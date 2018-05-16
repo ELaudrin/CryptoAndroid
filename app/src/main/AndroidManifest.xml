@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".detailCrypto"></activity>
+        <activity android:name=".Acceuil"></activity>
+        <activity android:name=".detailCrypto" />
     </application>
 
 </manifest>

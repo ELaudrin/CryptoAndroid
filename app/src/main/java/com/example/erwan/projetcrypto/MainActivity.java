@@ -10,8 +10,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 import java.util.*;
+import android.graphics.*;
+import android.os.*;
 
 public class MainActivity extends Activity {
+
+    private static int SPLASH_TIME_OUT = 3000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,36 +23,14 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
 
-        android.widget.ListView liste = findViewById(R.id.list);
-        ArrayList maListe = new ArrayList();
-        maListe.add("Bitcoin");
-        maListe.add("Ethereum");
-        maListe.add("Litecoin");
-        maListe.add("Ripple");
-
-
-         ArrayAdapter adt = new ArrayAdapter<String>
-                (this, android.R.layout.simple_list_item_1, android.R.id.text1, maListe);
-        liste.setAdapter(adt);
-
-
-        liste.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (position==0){
-                    /*Toast toast= Toast.makeText(MainActivity.this,"En cours de développement",Toast.LENGTH_LONG);
-                    toast.setGravity(Gravity.CENTER, 0, 0);toast.show();*/
-
-                    Intent intent0 = new Intent(MainActivity.this, detailCrypto.class);
-                    startActivity(intent0);
-
-                }else{
-
-                    Intent intent1 = new Intent(MainActivity.this, detailCrypto.class);
-                    startActivity(intent1);
-                }
-
-            };
-        });
+        new Timer().schedule(new TimerTask() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(MainActivity.this,Acceuil.class);
+                MainActivity.this.startActivity(intent);
+                finish();
+            }
+        },3000);
 
     }
 }
