@@ -51,7 +51,12 @@ class MyAdapter extends BaseAdapter{
         TextView texte = v.findViewById(R.id.monTexte);
         texte.setText("Sold " );
         TextView texte2 = v.findViewById(R.id.monTexte2);
-        texte2.setText("" + nb );
+        texte2.setText("Sep, 25, 2017" );
+
+        TextView texte3 = v.findViewById(R.id.monTexte3);
+        texte3.setText("" + nb );
+        TextView texte4 = v.findViewById(R.id.monTexte4);
+        texte4.setText("$80.50");
         return v;
     }
 }
