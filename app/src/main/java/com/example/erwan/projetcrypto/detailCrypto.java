@@ -2,12 +2,15 @@ package com.example.erwan.projetcrypto;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.app.Activity;
 
-public class detailCrypto extends AppCompatActivity {
+public class detailCrypto extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_crypto);
     }
+
+
 }
